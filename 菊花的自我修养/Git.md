@@ -1,4 +1,4 @@
-#  <center>Git入门</center>
+#  <center>Git</center>
 ## 分布式与集中式
 ## 安装
 ###### Windows上  
