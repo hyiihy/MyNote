@@ -46,3 +46,24 @@
   与左连接类似，看on后面的条件，遍历右表的列，每有一个相等返回一条数据，不管左表是否为空  
   **全连接**  
   看on后面的条件，遍历两边表的列，每有一个相等返回一条数据，不管另外一表是否为空（顺序？）
+
+-  **ORA-01722: 无效数字**  
+  一串数字，若不加引号，则被认为是整型。  
+  输入参数为一串数字的字符型时，若不加引号，Oracle会自动转型。  
+  但若是字符太长超过，超过最大整型表示范围，则报错（大雾）
+
+- **oracle 截取字符(substr)**  
+  `SUBSTR（string,start_position,[length]）``
+  ```sql
+  select * from ps025_unit where substr(unitid,7,3)<>'000'
+  select unitid,substr(unitid,6,3)from ps025_unit
+  ```
+
+- **DUAL**  
+  dual表是Oracle系统生成、维护的一张虚拟表  
+  dual只有一行数据  
+  我们可以通过它完成：  
+  - 查看当前用户  
+    `select user from dual`
+
+  - 
